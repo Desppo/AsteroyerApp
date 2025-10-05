@@ -25,7 +25,11 @@ SECRET_KEY = "django-insecure-a6hvf*4pjl7(0l55yf76(%l41)&j#d^qg9i2et4+#9i0a42@g&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['Desppo.pythonanywhere.com', '127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = [
+    'asteroyerapp.onrender.com', 
+    '127.0.0.1', 
+    'localhost', 
+] 
 
 
 # Application definition
