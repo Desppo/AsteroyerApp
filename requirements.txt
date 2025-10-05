@@ -11,6 +11,11 @@ sqlparse==0.5.3
 pytz 
 tzdata 
 requests
+numpy
+datetime
+json
+os
+re
 
 # Si usas PostgreSQL como base de datos (recomendado para producción)
 # psycopg2-binary 
