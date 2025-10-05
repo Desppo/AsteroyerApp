@@ -10,6 +10,7 @@ asgiref==3.9.2
 sqlparse==0.5.3
 pytz 
 tzdata 
+requests
 
 # Si usas PostgreSQL como base de datos (recomendado para producción)
 # psycopg2-binary 
