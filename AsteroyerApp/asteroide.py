@@ -161,10 +161,21 @@ class Asteroid:
             "mass": self.mass,
         }
     
-def calculateLatitude(x, y, z):
+def calculateLatitude(x, y, z, degrees=True):
+    x = np.asarray(x)
+    y = np.asarray(y)
+    z = np.asarray(z)
     r = np.sqrt(x**2 + y**2 + z**2)
-    return np.arcsin(z / r)  # En radianes
-def calculateAltitude(x, y, z):
-    R_earth = 6371  # Radio promedio de la Tierra en km
-    r = np.sqrt(x**2 + y**2 + z**2)
-    return r - R_earth
+    lat = np.arcsin(z / r) # radianes
+    if degrees:
+        return np.degrees(lat)
+    return lat
+
+def calculateAltitude(x, y, degrees=True):
+    x = np.asarray(x)
+    y = np.asarray(y)
+    lon = np.arctan2(y, x)  # radianes
+    if degrees:
+        lon = np.degrees(lon)
+        lon = ((lon + 180) % 360) - 180
+    return lon

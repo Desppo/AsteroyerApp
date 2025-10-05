@@ -28,7 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'asteroyerapp.onrender.com', 
     '127.0.0.1', 
-    'localhost', 
+    'localhost',
+    'www.twodoubleohs.com' 
 ] 
 
 
@@ -43,9 +44,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'AsteroyerApp',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -54,6 +58,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "asteroyer_api.urls"
 
