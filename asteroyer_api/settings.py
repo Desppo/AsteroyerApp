@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'asteroyerapp.onrender.com', 
+    '212.227.145.123',
     '127.0.0.1', 
     'localhost',
     'www.twodoubleohs.com' 
