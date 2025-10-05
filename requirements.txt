@@ -1,3 +1,5 @@
+# requirements.txt corregido
+
 # Dependencias principales de la API
 Django==5.2.7
 djangorestframework==3.16.1
@@ -10,18 +12,16 @@ asgiref==3.9.2
 sqlparse==0.5.3
 pytz 
 tzdata 
+
+# Librerías externas específicas de tu proyecto (requests y numpy)
 requests
 numpy
-datetime
-json
-os
-re
 
-# Si usas PostgreSQL como base de datos (recomendado para producción)
+# ---------------------------------------------
+# Puedes dejar estos, si los necesitas:
+
+# Si usas PostgreSQL (Base de datos de Render)
 # psycopg2-binary 
 
-# Si usas alguna de estas librerías, descomenta las líneas.
-# Generalmente son útiles pero pueden ser opcionales.
-# requests
+# Si usas PIL/Pillow para imágenes
 # pillow
-# pyyaml
