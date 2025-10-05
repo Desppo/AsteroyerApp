@@ -18,9 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from AsteroyerApp.views import test
+from AsteroyerApp.views import ateroids
 
 urlpatterns = [
     path("admin/", admin.site.urls),
 
     path("test/", test.as_view()),
+
+    path("asteroids/", ateroids.as_view()),
 ]
